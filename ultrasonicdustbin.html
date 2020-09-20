@@ -121,7 +121,23 @@
 				
 			  </ul>
 
-			 
+			 <code> #include <Stepper.h>
+ 
+				#define STEPS 2038 // the number of steps in one revolution of your motor (28BYJ-48)
+				
+				Stepper stepper(STEPS, 8, 10, 9, 11);
+				
+			  // this constant won't change. It's the pin number of the sensor's output:
+			  
+			  const int pingPin = 7;
+			  
+			  
+				
+				void setup() {
+				  // initialize serial communication:
+			   Serial.begin(9600);
+				stepper.setSpeed(10);
+				}</code>
 			
 
 
